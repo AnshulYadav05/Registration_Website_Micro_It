@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech For Girls Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌸 Tech For Girls Community</h1>
+    <form id="registrationForm" enctype="multipart/form-data" novalidate>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required placeholder="Enter your full name" />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required placeholder="e.g. 9876543210" pattern="[0-9]{10}" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required placeholder="e.g. you@example.com" />
+      </div>
+      <div class="form-group">
+        <label for="college">College / Department</label>
+        <input type="text" id="college" required placeholder="e.g. ABC University - CSE" />
+      </div>
+
+      <div class="form-group">
+        <button type="button" id="whatsappBtn">📤 Share on WhatsApp</button>
+        <p id="shareCounter">Click count: 0/5</p>
+        <p id="shareStatus" class="status-msg"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="screenshot">Upload Screenshot (Resume/Proof)</label>
+        <input type="file" id="screenshot" accept="image/*,.pdf" required />
+      </div>
+
+      <button type="submit" id="submitBtn">🚀 Submit Registration</button>
+    </form>
+
+    <p id="finalMessage" class="final-msg hidden"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
